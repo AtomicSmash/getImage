@@ -1,25 +1,15 @@
 <?php
 
-/*
-*
-* This helper function allows you call "getImage()" and it either pulls the default
-* featured image or even an image from a ACF custom field. It will even load a placeholder
-* image if it can't find anything set.
-*
-*/
-
-//#ASTODO document what is actually happening here
 
 function getImage($imageSize='',$classes="",$imageArray = ''){
 	
 	global $_wp_additional_image_sizes;
 	
-	
+	//Check to see if ACF image field is being passed.
 	if($imageArray == ''){
+		
 		if (has_post_thumbnail()){
-			//the_post_thumbnail($imageSize);
-			
-			//$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+
 
 			$thumb_id = get_post_thumbnail_id();
 			
@@ -83,10 +73,8 @@ function getImage($imageSize='',$classes="",$imageArray = ''){
 				
 				if($imageArray[0]['alt'] == ""){
 					$altTag = $imageArray[0]['title'];
-	
 				}else{
-					$altTag = $imageArray[0]['alt'];
-					
+					$altTag = $imageArray[0]['alt'];	
 				}
 			
 			
