@@ -35,21 +35,6 @@
  */
 
 
-/*
-$url = 'http://localhost/launchpad/wp-content/uploads/2013/03/sizes.jpg';      // Required
-$width = 100;                                                                  // Optional. Defaults to '150'
-$height = 300;                                                                 // Optional. Defaults to '150'
-$crop = true;                                                                  // Optional. Defaults to 'true'
-$retina = true;                                                               // Optional. Defaults to 'false'
-
-// Call the resizing function (returns an array)
-$image = matthewruddy_image_resize( $url, $width, $height, $crop, $retina );
-		
-echo("<img src='".$image['url']."' />");
-*/
-
-
-
 	function matthewruddy_image_resize( $url, $width = NULL, $height = NULL, $crop = true, $retina = false ) {
 
 		global $wpdb;
