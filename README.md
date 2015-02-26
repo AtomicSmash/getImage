@@ -5,6 +5,12 @@ Package includes the excellent TimThumb alternative by Mathew Ruddy: https://git
 
 This helper function allows you call "getImage()" and it either pulls the default featured image or even an image from a ACF custom field. It will even load a placeholder image if it can't find anything set.
 
+##Installation
+
+1. Grab both getImage.php and imageResize and add to your theme.
+2. Add an include from your theme's functions.php file.
+3. Start using getImage() within your templates.
+
 ##How to use
 
 ###echo getImage($imageSize,$classes,$imageArray)
@@ -23,8 +29,8 @@ If there is no image found a placeholder image will be loaded from the 'assets/i
 
 ##Image resizing
 
-By default, Wordpress doesn't handle some aspects of image resizing very well. For example, if there is a preset image that is 500x300 and the user uploads a smaller image that is 400x400 wordpress won't resize your image. Generally this is probably a stance to take, it stops lower resolution images being added to a site.
+By default, Wordpress doesn't handle some aspects of image resizing very well. For example, if there is an image preset that is 500x300 and the user uploads a smaller image that is 400x200 wordpress won't resize your image and because the image isnt touched, its original aspect ratio is maintained. Generally this is a good stance to take, it stops lower resolution images being added to a site and being stretched to fit areas.
 
 Yet there are some instances where this is needed, and it's far more acceptaple to have a lower resolution image that is the right aspect ratio, than a lower resolution image is completly the wrong sizing.
 
-To combat this, we've included the TimThumb alternative by Mathew Ruddy.
+To combat this, we've included the TimThumb alternative by Mathew Ruddy (imageResize.pho) which soleky uses wordpress functions to resize images.
